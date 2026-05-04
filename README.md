@@ -25,13 +25,18 @@ Build DJANGO application based on Architectural Pattern to organize CRUD and SSR
   ```
   pip install pipenv
   pipenv install --python 3.11
-  ```
 
-- Install packages:
-
-  ```
   pipenv install
   pipenv install django==4.2
+  ```
+
+- Install project and application:
+
+  ```
+  django-admin startproject madagascar .
+  python manage.py startapp plan
+  ./manage.py startapp sport
+ 
   ```
 
 - Migrate Database
