@@ -40,6 +40,7 @@ Build DJANGO application based on Architectural Pattern to organize CRUD and SSR
   ```
 
 - Migrate Database
+  CLUSTER> DATABASES > TABLE > COLUMN > ROW 
 
   ```
   ./manage.py migrate
