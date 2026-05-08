@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 def get_home(request):
     try:
-        print("get_home")
+        print("\n get_home")
         # Plan Model > data
         data = "MIT"
         return render(request, "home.html", {'data': data}, status=200)
