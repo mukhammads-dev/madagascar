@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # project related applications
     'plan',
     'sport',
-    'tour'
+    'tour',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
