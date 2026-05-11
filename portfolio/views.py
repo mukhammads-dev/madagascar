@@ -1,5 +1,6 @@
 from django.http import HttpResponse, HttpResponseServerError
 from django.shortcuts import render
+from portfolio.data import author
 
 # Portfolio controller[VIEW]
 
@@ -8,7 +9,7 @@ def get_portfolio(request):
     try:
         print("\n get_portfolio")
         # Portfolio Model > data
-        return render(request, "portfolio.html", {}, status=200)
+        return render(request, "portfolio.html", author, status=200)
     except Exception as err:
         print("Error in get_portfolio:", err)
         return HttpResponseServerError("Something went wrong")

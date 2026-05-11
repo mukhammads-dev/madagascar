@@ -1,0 +1,182 @@
+.portfolio-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: lavender;
+}
+
+.portfolio-frame .container {
+    height: 1315px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Left Section */
+.container .left-section {
+    position: relative;
+    width: 245px;
+    height: 1315px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.left-section .profile {
+    position: relative;
+    width: 245px;
+    height: 274px;
+    margin-top: 30px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-section .profile .image {
+    width: 177px;
+    height: 160px;
+    margin-bottom: 5px;
+    max-width: 100%;
+    border-radius: 85px;
+
+}
+
+.left-section .profile .name {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.left-section .profile .profession {
+    position: relative;
+    margin-bottom: 5px;
+    width: 114px;
+    height: 26px;
+
+    color: var(--Paragraph-Font, #767676);
+    font-kerning: none;
+    font-feature-settings: 'calt' off;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-section .profile .sns {
+    position: relative;
+    width: 245px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left-section .sns .box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #ffb400;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 4px black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left-section .marginer {
+    position: relative;
+    width: 221px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1.5 px solid #F0F0F6;
+
+}
+
+.left-section .sns .box .icon {
+    width: 24px;
+    height: 30px;
+    object-fit: inherit;
+}
+
+.left-section .detail {
+    position: relative;
+    width: 221px;
+    height: 126px;
+    background: lightgray;
+
+}
+
+.left-section .languages {
+    position: relative;
+    width: 221px;
+    height: 153px;
+    background: lightgray;
+
+}
+
+.left-section .skills {
+    position: relative;
+    width: 221px;
+    height: 242px;
+    background: lightgray;
+
+}
+
+.left-section .extra-skills {
+    position: relative;
+    width: 221px;
+    height: 160px;
+    background: lightgray;
+
+}
+
+/* Middle Section */
+.container .middle-section {
+    position: relative;
+    width: 974px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.middle-section .highlight {
+    position: relative;
+    width: 974px;
+    height: 447px;
+    margin-bottom: 159px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+
+}
+
+.middle-section .services {
+    position: relative;
+    width: 974px;
+    height: 653px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+
+}
+
+/* Right Section */
+.container .right-section {
+    position: relative;
+    width: 65px;
+    height: 100%;
+    background-color: #9791DD85;
+    display: flex;
+}
