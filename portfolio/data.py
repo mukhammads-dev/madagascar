@@ -17,10 +17,10 @@ author = {
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. "
         "Velit officia consequat duis enim velit mollit. lorem ipsum"
     ),
-    "about_me": (
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat "
-        "feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus"
-    ),
+    "about_me": (" Hi there, I am Software Engineer focused on developing modern,"
+                 "scalable, and high-performance web applications. Experienced in backend "
+                 "architecture, API development, and fullstack engineering using Python"
+                 ),
     "city": "Denau",
     "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
     "flower_desc": [
