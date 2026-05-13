@@ -1,0 +1,1 @@
+console.log("%c Main frontend Javascript", "color:green");

@@ -1,0 +1,21 @@
+.main-frame {
+    background: silver;
+}
+
+.main-frame .home {
+    height: 1700px;
+    min-width: 1320px;
+    background: white;
+}
+
+.main-frame .sport {
+    height: 1700px;
+    min-width: 1320px;
+    background: white;
+}
+
+.main-frame .tour {
+    height: 1700px;
+    min-width: 1320px;
+    background: white;
+}
