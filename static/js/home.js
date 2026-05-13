@@ -1,0 +1,1 @@
+console.log("%c home.js loaded", "color:blue");

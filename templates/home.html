@@ -2,11 +2,22 @@
 <html lang="en">
 
 {% include "components/header.html" %}
-
+ <link rel="stylesheet" href="/static/css/home.css" />
 <body>
     <div class="main-frame">
-        <div class="container home"> Home page with {{data}} </div>
+        <div class="container home">
+            <h1> Home page with {{data}} </h1>
+            <div class="card" style="width: 18rem;">
+            <img src="https://spots.ag/2025/08/09/lamborghini-sesto-elemento-abaeb-c994909082025230227_1.jpg" class="card-img-top" alt="no image">
+            <div class="card-body">
+            <h5 class="card-title">A road-legal Lamborghini</h5>
+            <p class="card-text">Some car-spotting moments are rare. Then there are those that become automotive history. What you’re about to read is an unexpected twist in the Sesto Elemento story.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+         </div>
     </div>
+    <script type="text/javascript" src="/static//js/home.js"></script>
 </body>
 
 </html>

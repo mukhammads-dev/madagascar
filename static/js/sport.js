@@ -1,0 +1,1 @@
+console.log("%c sport.js loaded", "color:blue");

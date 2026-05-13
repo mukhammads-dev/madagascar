@@ -1,0 +1,1 @@
+console.log("%c tour.js loaded", "color:blue");
