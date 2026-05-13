@@ -1,0 +1,34 @@
+<div class="navbar-area">
+  <div class="menu">
+    <nav class="site-navbar">
+      <a href="/" class="section">Madagascar</a>
+
+      <ul>
+        <li>
+          <a href="/" class="{% if request.path == '/' %}active{% endif %}"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/sport"
+            class="{% if request.path == '/sport/' %}active{% endif %}"
+            >Sport</a
+          >
+        </li>
+        <li>
+          <a
+            href="/tour"
+            class="{% if request.path == '/tour/' %}active{% endif %}"
+            >Tour</a
+          >
+        </li>
+        <li>
+          <a href="/portfolio">
+            <i class="bi bi-person-lines-fill"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

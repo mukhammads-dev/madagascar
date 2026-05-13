@@ -1,3 +1,55 @@
 .main-frame {
-    background: silver;
+  background: url(/static/img/background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.main-frame .navbar-area {
+  background: rgb(65 51 185 / 64%);
+  border-bottom: 1px solid #8491bd24;
+  height: 65px;
+}
+
+.navbar-area .menu {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-area .menu .site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-area a.section {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-area .site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-area .site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar-area .site-navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-area .site-navbar ul li a.active {
+  background: rgba(0 31 229 / 22%);
 }

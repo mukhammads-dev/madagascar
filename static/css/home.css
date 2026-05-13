@@ -1,5 +1,28 @@
 .home {
-    height: 1700px;
-    min-width: 1320px;
-    background: white;
+  height: calc(100vh - 65px);
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.home h1 {
+  font-family: fantasy;
+  margin-top: 50px;
+}
+
+.home .custom-list {
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.home .custom-radius {
+  border-radius: 7px;
+}
+
+.home .plan {
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.home .butt1 {
+  margin-left: 5px;
 }
