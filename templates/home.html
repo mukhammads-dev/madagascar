@@ -30,26 +30,28 @@
         </div>
 
         <ul id="item-list" class="list-group pb-5">
+          {% for item in plans %}
           <li
             class="plan list-group-item bg-light d-flex align-items-center justify-content-between custom-list"
           >
-            <span class="item-text">Build {% now "Y-m-d H:i:s"%}</span>
+            <span class="item-text"> {{item.content}} </span>
             <div>
               <button
-                data-id=""
+                data-id="{{ item.id }}"
                 class="edit-me btn btn-success btn-sm mr-1 custom-radius"
               >
                 <i style="margin-right: 5px" class="bi bi-pencil-square"></i
                 >Edit
               </button>
               <button
-                data-id=""
+                data-id="{{ item.id }}"
                 class="delete-me btn btn-danger btn-sm custom-radius"
               >
                 <i style="margin-right: 5px" class="bi bi-trash"></i> Delete
               </button>
             </div>
           </li>
+          {% endfor%}
         </ul>
 
         <button
