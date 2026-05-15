@@ -3,5 +3,7 @@ from . import views
 
 # Plan url
 urlpatterns = [
-    path("", views.get_home, name="get home")
+    # Traditional API
+    path("", views.get_home, name="get home"),
+    path("create_goal", views.create_goal, name="create_goal"),
 ]

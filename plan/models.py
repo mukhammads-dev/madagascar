@@ -22,3 +22,18 @@ class Plan():
 
             print(f"The count: {len(plans)} plans")
             return plans
+# Define
+
+    def create_goal(self, content):
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """
+                INSERT INTO plan SET content=%s,
+                created_at=CURRENT_TIMESTAMP, updated_at=CURRENT_TIMESTAMP""",
+                [content]
+            )
+            cursor.execute("SELECT LAST_INSERT_ID()")
+            new_plan_id = cursor.fetchone()[0]
+
+            print(f"The new plan_id: {new_plan_id} is created")
+            return new_plan_id
