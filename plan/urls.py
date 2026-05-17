@@ -6,4 +6,6 @@ urlpatterns = [
     # Traditional API
     path("", views.get_home, name="get home"),
     path("create_goal", views.create_goal, name="create_goal"),
+    # Rest API
+    path("create_plan", views.create_plan, name="create_plan"),
 ]
