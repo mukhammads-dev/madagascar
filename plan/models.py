@@ -63,3 +63,23 @@ class Plan():
             print("STEP4: Database > CRUD result > Backend")
             print(f"The new plan_id: {new_plan_id} is created")
             return new_plan_id
+
+    def update_plan(self, data):
+        content = data.get("new_plan")
+        plan_id = data.get("id")
+
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """
+                UPDATE plan
+                SET content=%s, updated_at = CURRENT_TIMESTAMP
+                WHERE id=%s
+                """,
+                [content, plan_id]
+            )
+            rows_affected = cursor.rowcount
+
+        if rows_affected == 0:
+            raise ValueError("Plan is not found")
+        print(f"The plan_id {plan_id} is updated")
+        return plan_id
