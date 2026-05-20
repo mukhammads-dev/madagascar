@@ -4,7 +4,7 @@ function generateTemplate(new_plan) {
     return `  <li
             class="plan list-group-item bg-light d-flex align-items-center justify-content-between custom-list"
           >
-            <span style="color:green" class="item-text">${new_plan.content}</span>
+            <span class="item-text">${new_plan.content}</span>
             <div>
               <button
                 data-id="${new_plan.id}"
@@ -29,12 +29,10 @@ form_object.addEventListener("submit", function (event) {
 
     const input_value = document.getElementById("create-field").value;
 
-    console.log("STEP1: Frontend > Rest API REQUEST > Backend");
     // start Rest API
     axios
         .post("/create_plan", { content: input_value })
         .then((response) => {
-            console.log("STEP6: Frontend recieved back API Response");
             console.log("AXIOS Response Create:", response);
             const { status, result } = response.data;
             const new_plan = {
@@ -53,13 +51,13 @@ form_object.addEventListener("submit", function (event) {
         .catch((err) => {
             console.log("Creating plan, Error:", err)
         });
+
 });
 
 
 
 
 document.addEventListener("click", function (e) {
-    console.log("event:", e);
 
     if (e.target.classList.contains("edit-me")) {
 
