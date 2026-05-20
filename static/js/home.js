@@ -96,10 +96,8 @@ document.addEventListener("click", function (e) {
                     id: e.target.getAttribute("data-id"),
                     new_plan: user_input
                 })
-
                 .then((response) => {
                     console.log("AXIOS Response Update:", response);
-
                     const { status, result } = response.data;
 
                     e.target.parentElement.parentElement.querySelector(
@@ -108,11 +106,25 @@ document.addEventListener("click", function (e) {
 
                     console.log("Updated plan:", result, user_input);
                 })
-
                 .catch((err) => {
                     console.log("Updating plan, Error:", err);
                 });
-
         }
     }
 });
+
+document.getElementById("clean-all").addEventListener("click", () => {
+    if (confirm("Are you sure to delete all plans?")) {
+        axios
+            .post("/delete_all_plans")
+            .then((response) => {
+                console.log("AXIOS Response Delete all:", response)
+                const { status, result } = response.data;
+                document.getElementById("item-list").innerHTML = "";
+                console.log("All plans have been deleted:", result);
+            })
+            .catch((err) => {
+                console.log("Deleting all plans, Error:", err)
+            })
+    }
+})

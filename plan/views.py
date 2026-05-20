@@ -103,7 +103,7 @@ def delete_plan(request):
 @csrf_exempt
 def delete_all_plans(request):
     try:
-        print("\n delete_all_plans")
+        print("\n delete_all_plans")  # STEP 1 Backendga kirish
         if request.method != "POST":
             raise ValueError("Only post requests are allowed")
 
