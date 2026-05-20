@@ -95,3 +95,10 @@ class Plan():
 
         print(f"The plan_id: {plan_id} is deleted")
         return plan_id
+
+    def delete_all_plans(self):
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM plan WHERE 1 = 1")
+
+        print("The plans have been deleted")
+        return True
