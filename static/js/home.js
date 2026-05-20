@@ -59,6 +59,29 @@ form_object.addEventListener("submit", function (event) {
 
 document.addEventListener("click", function (e) {
 
+    if (e.target.classList.contains("delete-me")) {
+        const plan_id = e.target.getAttribute("data-id");
+
+        if (confirm("Do you want to delete? ")) {
+            /* start Rest API*/
+            axios
+                .post("/delete_plan", { id: plan_id })
+                .then((response => {
+                    console.log("AXIOS Response Delete:", response);
+                    const { status, result } = response.data;
+                    e.target.parentElement.parentElement.remove();
+                    console.log("Delete plan:", result, status)
+                }))
+                .catch((err => {
+                    console.log("Delete plan, Error:", err);
+                }));
+        }
+
+    }
+
+
+
+
     if (e.target.classList.contains("edit-me")) {
 
         const user_input = prompt(
