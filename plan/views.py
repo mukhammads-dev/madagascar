@@ -79,3 +79,22 @@ def update_plan(request):
     except Exception as err:
         message = str(err)
         return JsonResponse({"status": "fail", "message": message}, status=500)
+
+
+@csrf_exempt
+def delete_plan(request):
+    try:
+        print("\n update_plan")
+        if request.method != "POST":
+            raise ValueError("Only post requests are allowed")
+
+        data = json.loads(request.body)
+        print("request.body:", data)
+
+        result = plan.delete_plan(data)
+
+        return JsonResponse({"status": "succes", "result": result}, status=201)
+
+    except Exception as err:
+        message = str(err)
+        return JsonResponse({"status": "fail", "message": message}, status=500)

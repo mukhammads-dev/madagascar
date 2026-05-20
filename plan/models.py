@@ -77,3 +77,21 @@ class Plan():
             raise ValueError("Plan is not found")
         print(f"The plan_id {plan_id} is updated")
         return plan_id
+
+# Delete with Rest API
+
+    def delete_plan(self, data):
+        plan_id = data.get("id")
+
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "DELETE FROM plan WHERE id = %s",
+                [plan_id]
+            )
+            rows_affected = cursor.rowcount
+
+        if rows_affected == 0:
+            raise ValueError("Plan is not found")
+
+        print(f"The plan_id: {plan_id} is deleted")
+        return plan_id
